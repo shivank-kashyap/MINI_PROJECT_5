@@ -1,0 +1,464 @@
+/* CSS Variables for better maintenance */
+:root {
+    --primary-color: #6f42c1;        /* Main Purple */
+    --primary-dark: #5936a2;         /* Darker Purple for hover */
+    --accent-color: #28a745;         /* Green for completion */
+    --background-light: #f8f9fa;     /* Very Light Gray */
+    --background-dark: #343a40;      /* Dark Navy for footer */
+    --text-color-dark: #212529;
+    --text-color-light: #ffffff;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color-dark);
+    background-color: var(--text-color-light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+/* Headings and Sections */
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    color: var(--text-color-dark);
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.light-bg {
+    background-color: var(--background-light);
+    padding: 80px 0;
+}
+
+/* Use Primary color for sections like Testimonial */
+.dark-bg {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 60px 0;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(111, 66, 193, 0.1);
+}
+
+/* 1. Navigation Bar */
+.navbar {
+    background-color: var(--text-color-light);
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-color-dark);
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Active link style */
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.search-box input {
+    border: none;
+    padding: 3px;
+    outline: none;
+    width: 100px;
+}
+
+.search-box i {
+    color: var(--primary-color);
+}
+
+/* 2. Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 100px 0;
+    background: linear-gradient(to bottom right, #f4f4ff, #ffffff);
+}
+.hero-section h1 {
+    font-size: 3em;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #495057;
+}
+.hero-buttons button {
+    margin: 0 10px;
+}
+.welcome-text {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f0f0ff;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+}
+
+
+/* 3. Features Section */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.feature-card {
+    background: var(--text-color-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+.feature-icon {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 50%;
+}
+.plans-title {
+    margin-top: 0;
+}
+
+/* NEW: How It Works Section */
+.how-it-works-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--background-light);
+}
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+.step-card {
+    padding: 30px;
+    background: var(--text-color-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--primary-color);
+}
+.step-card h3 {
+    color: var(--primary-color);
+}
+.step-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+
+/* 4. Testimonial Section (For Parents) */
+.testimonial-section {
+    text-align: center;
+}
+.testimonial-section blockquote {
+    font-size: 1.4em;
+    font-style: italic;
+    max-width: 800px;
+    margin: 30px auto 20px;
+    padding: 0 20px;
+    line-height: 1.5;
+}
+.testimonial-section footer {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 5. Routine Tracker Section */
+.routine-tracker-section h2, .routine-tracker-section p {
+    text-align: center;
+}
+.tracker-box {
+    background: var(--text-color-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.task-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.task-input-group input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.progress-bar-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.progress-bar-container span {
+    font-weight: bold;
+}
+.progress-bar {
+    flex-grow: 1;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    height: 20px;
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px;
+    color: var(--text-color-light);
+    font-size: 0.8em;
+    transition: width 0.5s ease-in-out, background-color 0.5s;
+    min-width: 35px;
+}
+
+.task-list {
+    list-style: none;
+}
+.task-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.task-list li:last-child {
+    border-bottom: none;
+}
+
+/* Style for completed tasks */
+.task-list li.completed label {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-list label {
+    flex-grow: 1;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.task-list input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.remove-task-btn {
+    background: transparent;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+.remove-task-btn:hover {
+    color: #c82333;
+}
+
+/* Keyframes for completion animation */
+.progress-fill.complete {
+    animation: celebrate 0.5s ease-out;
+}
+@keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* 6. Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 80px 0;
+}
+.contact-form {
+    max-width: 500px;
+    margin: 30px auto;
+    background: var(--text-color-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* 7. Footer - Corrected to use --background-dark */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--background-dark); /* Using dark navy variable */
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer p {
+    color: #adb5bd; /* Slightly lighter text for dark background */
+}
+
+.social-links a {
+    color: var(--text-color-light);
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .search-box {
+        order: 1;
+    }
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+    .hero-section {
+        padding: 60px 0;
+    }
+    .feature-grid, .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .social-links {
+        margin-top: 10px;
+    }
+}

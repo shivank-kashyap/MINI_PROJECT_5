@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssistiveAI - Daily Routines</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">AssistiveAI</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="how_it_works.html">How It Works</a>
+                <a href="features.html">Features</a>
+                <a href="parents.html">For Parents</a>
+                <a href="routines.html" class="active">Routines</a>
+                <a href="contact.html">Contact</a>
+                <div class="search-box"><input type="text" placeholder="Search..."><i class="fa-solid fa-search"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="routine-tracker-section light-bg">
+        <div class="container">
+            <h2>Daily Routine Tracker ✅</h2>
+            <p>Add, remove, and check off tasks to track your progress and celebrate your child's milestones!</p>
+            <div class="tracker-box">
+                <div class="task-input-group">
+                    <input type="text" id="newTaskInput" placeholder="e.g., Brush teeth">
+                    <button id="addTaskBtn" class="btn btn-primary">Add Task</button>
+                </div>
+                <div class="progress-bar-container">
+                    <span>Progress</span>
+                    <div class="progress-bar">
+                        <div id="progressBar" class="progress-fill" style="width: 0%;">0%</div>
+                    </div>
+                </div>
+                <ul id="taskList" class="task-list">
+                    <li data-checked="false" data-task-id="1"><input type="checkbox" class="task-checkbox"><label>Morning Exercise</label><button class="remove-task-btn"><i class="fa-solid fa-times"></i></button></li>
+                    <li data-checked="false" data-task-id="2"><input type="checkbox" class="task-checkbox"><label>Study / Learning Time</label><button class="remove-task-btn"><i class="fa-solid fa-times"></i></button></li>
+                    <li data-checked="false" data-task-id="3"><input type="checkbox" class="task-checkbox"><label>Playtime</label><button class="remove-task-btn"><i class="fa-solid fa-times"></i></button></li>
+                    <li data-checked="false" data-task-id="4"><input type="checkbox" class="task-checkbox"><label>Bedtime Routine</label><button class="remove-task-btn"><i class="fa-solid fa-times"></i></button></li>
+                    <li data-checked="false" data-task-id="5"><input type="checkbox" class="task-checkbox"><label>Breakfast</label><button class="remove-task-btn"><i class="fa-solid fa-times"></i></button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer dark-bg">
+        <div class="container">
+            <p>&copy; 2025 AssistiveAI | Empowering Every Child</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
